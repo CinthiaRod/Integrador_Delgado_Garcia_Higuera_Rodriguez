@@ -8,7 +8,7 @@ const authorController = {
     },
 
     findAuthor: ()=> {
-        //buscar por autor
+        //buscar por autor.
     },
 
     addAuthor: () =>{
