@@ -3,36 +3,36 @@ const bookView = require('../views/booksView');
 
 const bookController = {
     showAuthor: () => {
-        const author = vehicleModel.readVehicle();
-        vehicleView.showAuthor(author);
+        const book = bookModel.readBook();
+        bookView.showbook(book);
     },
 
-    findAuthor: ()=> {
-        //buscar por autor
+    findBook: ()=> {
+        //buscar por libro
     },
 
-    addAuthor: () =>{
-        const authorDescription = authorView.promptForAuthor(); 
-        const author = authorModel.readAuthor();
-        vehicle.push({"id": author.length + 1, "name": vehicleDescription.marca});
-        vehicleModel.saveVehicle(vehicle);
-        vehicleView.confimationMessage('Autor agregado con exito');
+    addBook: () =>{
+        const bookDescription = bookView.promptForAuthor(); 
+        const book = bookModel.readBook();
+        book.push({"id": book.length + 1, "title": bookDescription.title});
+        bookModel.saveBook(book);
+        bookView.confimationMessage('libro agregado con exito');
     },
 
-    editAuthor: ()=>{
-        //editar autor -- actualizar informacion
+    editBook: ()=>{
+        //editar libro -- actualizar informacion
     },
 
-    deleteVehicle: () =>{
-        const vehicle = vehicleModel.readVehicle();
-        if(vehicle.length === 0) {
-            vehicleView.showVehicle('No hay vehiculos para eliminar');
+    deleteBook: () =>{
+        const book = bookModel.readBook();
+        if(book.length === 0) {
+            bookView.showBook('No hay libros para eliminar');
             return;
         }
-        const vehicleId = vehicleView.promptForVehicleId(vehicle);
-        vehicle.splice(vehicleId, 1);
-        vehicleModel.saveVehicle(vehicle);
-        vehicleView.confimationMessage('Vehiculo eliminado con exito');
+        const bookId = bookView.promptForBookId(book);
+        book.splice(bookId, 1);
+        bookModel.saveBook(book);
+        bookView.confimationMessage('Libro eliminado con exito');
     }
 }
 

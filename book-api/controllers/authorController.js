@@ -3,8 +3,8 @@ const authorView = require('../views/authorView');
 
 const authorController = {
     showAuthor: () => {
-        const author = vehicleModel.readVehicle();
-        vehicleView.showAuthor(author);
+        const author = authorModel.readAuthor();
+        authorView.showAuthor(author);
     },
 
     findAuthor: ()=> {
@@ -14,25 +14,25 @@ const authorController = {
     addAuthor: () =>{
         const authorDescription = authorView.promptForAuthor(); 
         const author = authorModel.readAuthor();
-        vehicle.push({"id": author.length + 1, "name": vehicleDescription.marca});
-        vehicleModel.saveVehicle(vehicle);
-        vehicleView.confimationMessage('Autor agregado con exito');
+        author.push({"id": author.length + 1, "name": authorDescription.name});
+        authorModel.saveAuthor(author);
+        authorView.confimationMessage('Autor agregado con exito');
     },
 
     editAuthor: ()=>{
         //editar autor -- actualizar informacion
     },
 
-    deleteVehicle: () =>{
-        const vehicle = vehicleModel.readVehicle();
-        if(vehicle.length === 0) {
-            vehicleView.showVehicle('No hay vehiculos para eliminar');
+    deleteAuthor: () =>{
+        const author = authorModel.readAuthor();
+        if(author.length === 0) {
+            authorView.showAuthor('No hay autores para eliminar');
             return;
         }
-        const vehicleId = vehicleView.promptForVehicleId(vehicle);
-        vehicle.splice(vehicleId, 1);
-        vehicleModel.saveVehicle(vehicle);
-        vehicleView.confimationMessage('Vehiculo eliminado con exito');
+        const authorId = authorView.promptForAuthorId(author);
+        author.splice(authorId, 1);
+        authorModel.saveAuthor(author);
+        authorView.confimationMessage('Autor eliminado con exito');
     }
 }
 

@@ -2,37 +2,37 @@ const publishersModel = require('../models/publishersModel');
 const publishersView = require('../views/publishersView');
 
 const publisherController = {
-    showAuthor: () => {
-        const author = vehicleModel.readVehicle();
-        vehicleView.showAuthor(author);
+    showPublishers: () => {
+        const publisher = publishersModel.readPublisher();
+        publishersView.showPublishers(publisher);
     },
 
-    findAuthor: ()=> {
+    findPublishers: ()=> {
         //buscar por autor
     },
 
-    addAuthor: () =>{
-        const authorDescription = authorView.promptForAuthor(); 
-        const author = authorModel.readAuthor();
-        vehicle.push({"id": author.length + 1, "name": vehicleDescription.marca});
-        vehicleModel.saveVehicle(vehicle);
-        vehicleView.confimationMessage('Autor agregado con exito');
+    addPublisher: () =>{
+        const publisherDescription = publishersView.promptForPublisher(); 
+        const publisher = publishersModel.readPublisher();
+        publisher.push({"id": publisher.length + 1, "publisher": publisherDescription.publisher});
+        publishersModel.savePublisher(publisher);
+        publishersView.confimationMessage('Editorial agregada con exito');
     },
 
-    editAuthor: ()=>{
-        //editar autor -- actualizar informacion
+    editPublisher: ()=>{
+        //editar editorial -- actualizar informacion
     },
 
-    deleteVehicle: () =>{
-        const vehicle = vehicleModel.readVehicle();
-        if(vehicle.length === 0) {
-            vehicleView.showVehicle('No hay vehiculos para eliminar');
+    deletePublisher: () =>{
+        const publisher = publishersModel.readPublisher();
+        if(publisher.length === 0) {
+            publishersView.showPublishers('No hay editoriales para eliminar');
             return;
         }
-        const vehicleId = vehicleView.promptForVehicleId(vehicle);
-        vehicle.splice(vehicleId, 1);
-        vehicleModel.saveVehicle(vehicle);
-        vehicleView.confimationMessage('Vehiculo eliminado con exito');
+        const publisherId = publishersView.promptForPublisherId(publisher);
+        publisher.splice(publisherId, 1);
+        publishersModel.savePublisher(publisher);
+        publishersView.confimationMessage('Editorial eliminada con exito');
     }
 }
 
