@@ -59,21 +59,21 @@ Cada opción te llevará a un menú interactivo que te permitirá:
 1. Mostrar autores: Muestra todos los autores.
 2. Agregar autor: Permite agregar un nuevo autor.
 3. Buscar autor: Permite buscar autores por nombre.
-4. Eliminar autor: Permite eliminar un autor.
+4. Eliminar autor: Permite eliminar un autor por ID.
 5. Volver al menú principal.
 
 #### Menú de Libros
 1. Mostrar libros: Muestra todos los libros.
 2. Agregar libro: Permite agregar un nuevo libro.
 3. Buscar libro: Permite buscar libros por título.
-4. Eliminar libro: Permite eliminar un libro.
+4. Eliminar libro: Permite eliminar un libro por ID.
 5. Volver al menú principal.
 
 #### Menú de Editoriales
 1. Mostrar Editoriales: Muestra todas las editoriales.
 2. Agregar Editorial: Permite agregar una nueva editorial.
 3. Buscar Editorial: Permite buscar editoriales.
-4. Eliminar Editorial: Permite eliminar una editorial.
+4. Eliminar Editorial: Permite eliminar una editorial por ID.
 5. Volver al menú principal.
 
 #### Cerrar el Cliente
