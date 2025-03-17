@@ -1,4 +1,4 @@
-//Importar modulos
+//Importar modulosjnrgtejontrehjo
 const { log } = require('console');
 const net =require('net');
 //const readlineSync =require('readline-sync');
