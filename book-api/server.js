@@ -20,7 +20,11 @@ const server = net.createServer((socket) => {
 
   //Manejo de evento "error" para posibles errores
   socket.on('error', (err) => {
-    console.log('Error:', err.message);
+    if (err.code === 'ECONNRESET') {
+      console.log('Cliente desconectado:', socket.remoteAddress + ":" + socket.remotePort);
+    } else {
+      console.log('Error:', err.message);
+    }
   });
 });
 
@@ -28,4 +32,3 @@ const server = net.createServer((socket) => {
 server.listen(8080, () => {
   console.log('Servidor escuchando en el puerto 8080');
 });
-  
