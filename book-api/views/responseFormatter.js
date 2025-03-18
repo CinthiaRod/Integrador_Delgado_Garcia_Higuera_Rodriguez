@@ -62,7 +62,7 @@ const booksView = {
     },
     // Solicita al usuario ingresar un titulo de libro
     promptForBook: () => {
-        const title = readlineSync.question('Ingrese el título del libro: ');
+        const title = readlineSync.question('Ingrese el titulo del libro: ');
         return title.trim();
     },
     // Solicita al usuario ingresar el ID del libro a eliminar. Primero se despliega la lista y después el usuario decidirá que libro eliminar.
