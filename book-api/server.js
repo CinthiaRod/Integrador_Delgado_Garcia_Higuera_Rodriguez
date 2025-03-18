@@ -15,7 +15,7 @@ const server = net.createServer((socket) => {
 
   //Manejo del evento "end" para la desconexión del cliente 
   socket.on('end', () => {
-    console.log('Cliente desconectado:', socket.remoteAddress + ":" + socket.remotePort);
+    console.log('Cliente desconectado');
   });
 
   //Manejo de evento "error" para posibles errores
