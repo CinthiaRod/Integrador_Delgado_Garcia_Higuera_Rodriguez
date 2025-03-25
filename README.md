@@ -51,7 +51,7 @@ El proyecto sigue la estructura del patrón MVC:
 2. Abrir la capeta 📂 Integrador_Delgado_Garcia_Higuera_Rodriguez en VSC.
 3. Posicionate en la terminal dentro de la carpeta 📂 Integrador_Delgado_Garcia_Higuera_Rodriguez-->📂 book-api 
 4. Enceder el sevidor en la terminal ejecutando el siguiente comando: node server.js
-5. Enceder el cliente en la terminal ejecutando el siguiente comando: client.js
+5. Enceder el cliente en la terminal ejecutando el siguiente comando:  node client.js
 
 ​​​                    
                               ​📡​Uso del servidor TCP (server.js)
